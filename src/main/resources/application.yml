@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: q-AI-agent-Project-Backend
+  profiles:
+    active: local
+  #datasource:
+   # url: jdbc:postgresql://rm-cn-9me4djll40004czo.rwlb.rds.aliyuncs.com:5432/q_ai_agent
+   # username: my_user
+   # password: Qq#110176418
+  #ai:
+   # vectorstore:
+   #   pgvector:
+   #     index-type: HNSW
+   #     dimensions: 1536
+   #     distance-type: COSINE_DISTANCE
+   #     max-document-batch-size: 10000 # Optional: Maximum number of documents per batch
+# searchApi
+search-api:
+  api-key: ehekEpeNDMpfamaYoszbySqp
+
+server:
+  port: 8123
+  servlet:
+    context-path: /api
+# springdoc-openapi
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.qin.qaiagentproject.controller
+# knife4j
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
